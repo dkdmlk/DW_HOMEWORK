@@ -39,7 +39,7 @@
         />
         <div class="question-box">
           <span>회원가입에 동의하나요?</span>
-          <input type="checkbox" />
+          <input type="checkbox" id="question"/>
         </div>
         <div class="join-btn">
           <button type="button">회원 가입</button>
@@ -133,6 +133,12 @@
       function doJoin(jsonparam) {
         console.log(jsonparam);
       }
+      //체크박스
+      $('#question').click(function(){
+        if($('#question').prop('checked',true)){
+          confirm('회원가입에 동의 하시겠습니까?')
+        }
+      })
     </script>
   </body>
 </html>
