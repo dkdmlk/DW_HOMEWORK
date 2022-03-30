@@ -84,7 +84,7 @@
             elementValue = $('#' + elementID).val();
             if (elementValue === '') {
               alert('내용을 확인하여주세요');
-              $('#' + elementID).focus;
+              $('#' + elementID).focus();
               return false;
             }
             if (
@@ -94,7 +94,7 @@
               alert(
                 '회원이름과 닉네임은 20글자 이하고 한글만 사용할 수 있습니다.',
               );
-              $('#' + elementID).focus;
+              $('#' + elementId).focus();
               return false;
             }
             if (
@@ -102,7 +102,7 @@
               !checkNames(elementValue)
             ) {
               alert('닉네임과 이름은 한글이어야합니다');
-              $('#' + elementID).focus;
+              $('#' + elementId).focus();
               return false;
             }
             if (elementID === 'userPhone') {
@@ -114,7 +114,7 @@
         var userEmail = $('#userEmail').val().trim();
         if (userEmail === '') {
           alert('내용을 확인하여주세요');
-          $('#userEmail').focus;
+          $('#userEmail').focus();
           return false;
         }
         var emailCompany = $('#emailList option:selected').val();
