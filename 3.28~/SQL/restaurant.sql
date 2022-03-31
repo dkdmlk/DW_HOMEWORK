@@ -18,6 +18,8 @@ SELECT * FROM restaurant WHERE foodNo = 30 AND restaurantName= '빠스타스';
 레스토랑 테이블에서 위에 작성한 select쿼리 호출 시간이 오래 걸리기 시작했다.
 가장 먼저해야하는 바람직한 행동은?
 답안 작성 =>
+추가하여 나눌수 있는 모델링이 있는지 찾아본다
+(관계형데이터 모델링으로)나눌수있는지본다.
 */
 
 DELETE FROM food
@@ -27,4 +29,9 @@ WHERE foodNo = 30;
 하지만 레스토랑 테이블에 30번 데이터가 있어서 지울 수가 없다. 
 음식 테이블에 30번 데이터를 지울 방법은 무엇일까?
 답안 작성 =>
+ALTER TABLE food 
+foreign key(foodno)
+references food(foodno)
+ON DELEETE CASCADE 
+on cascade로 이벤트를줘 자식데이터와 함깨 지운다
 */
