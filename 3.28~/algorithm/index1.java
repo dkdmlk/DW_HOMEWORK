@@ -9,12 +9,12 @@ public class 버블함수 {
 		int count = 0; //총 몇회전 했는지 알아내는 변수
 		int temp = 0;
 		for(int i=0; i<array.length;++i) {
-			++count;
 			for(int j = 0; j<array.length;++j) {
 				if(array[i] < array[j]) {
 					temp = array[i];
 					array[i] = array[j];
 					array[j] = temp;
+					++count;
 				}
 			}
 		}
