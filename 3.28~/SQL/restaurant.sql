@@ -18,8 +18,7 @@ SELECT * FROM restaurant WHERE foodNo = 30 AND restaurantName= '빠스타스';
 레스토랑 테이블에서 위에 작성한 select쿼리 호출 시간이 오래 걸리기 시작했다.
 가장 먼저해야하는 바람직한 행동은?
 답안 작성 =>
-추가하여 나눌수 있는 모델링이 있는지 찾아본다
-(관계형데이터 모델링으로)나눌수있는지본다.
+foono(Fk에)index(목차)를 부여
 */
 
 DELETE FROM food
