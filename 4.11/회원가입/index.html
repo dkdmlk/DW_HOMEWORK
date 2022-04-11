@@ -73,10 +73,11 @@
             }
             if(elementID === 'id' && !isIdCheck(elementValue)){
                 alert("아이디는 5~20자의 영문 소문자, 숫자만 사용 가능합니다.")
+                $('#'+elementID).focus();
                 return false;
             }
-            if($('#pswd1').val() !== $('#pswd2').val()){
-                alert('비밀번호와 비밀번호 재확인은 같아야 합니다.')
+            if($('#pswd1').val() !== $('#pswd2').val()){ 
+                alert('비밀번호와 비밀번호 재확인은 같아야 합니다.');
                 return false;
             }
        }
