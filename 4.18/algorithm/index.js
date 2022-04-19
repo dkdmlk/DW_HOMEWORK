@@ -2,12 +2,15 @@
 // 선택정렬을 이용해서 오름차순으로 정렬해보자.
 // 선택정렬 관련해서 서치는 좋지만 코드는 직접 풀어봐요! 과정을 중요시 생각합니다 :)
 let array = [9, 6, 7, 3, 5];
+let result = new Array
+let min = array[0];
 		for(let i = 0; i<array.length; i++) {
 			for(let j = i + 1; j < array.length; j++) { 
-				if(array[i] > array[j]) {
-					let temp = array[i];
-					array[i] = array[j];
-					array[j] = temp; 
+				if(min > array[j]) {
+					min = array[j]
 				}
 			}
+			temp = min
+			array[i] = array[j];
+			array[j] = temp; 
 		}
