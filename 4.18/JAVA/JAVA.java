@@ -91,9 +91,9 @@ public class UserService{
     }
     //3. 레벨 3이상 직원을 모두 해고하시오.
     public List<UserVO> deleteUser(List<UserVO> list, int lv){
-    	for(int i=0; i<list.size();++i) {
+    for(int i=0; i<list.size();++i) {
     		if(list.get(i).getLv() == lv) {
-    			list.remove(i);
+    			System.out.println("문제3. 해고된 사원 이름 : "+list.remove(i).getEname());
     		}
     	}
         return list;
@@ -136,9 +136,6 @@ public class MainController{
         us.updateSal(list, "DEVELOP");
         us.updateLv(list);
         us.deleteUser(list, 3);
-        for(UserVO vo : list) {
-			System.out.println("문제3. 이름 : "+vo.getEname()+" 레벨 : "+vo.getLv());
-		}
         us.selectUserByEname(list, "King");
         
     }
